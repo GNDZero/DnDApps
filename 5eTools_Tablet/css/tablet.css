@@ -1,0 +1,75 @@
+@layer vetools {
+  :root {
+    --tablet-font-scale: 1.1;
+    --tablet-hit-size: 44px;
+  }
+
+  body.tablet-mode {
+    font-size: calc(1rem * var(--tablet-font-scale));
+  }
+
+  body.tablet-zoom {
+    --tablet-font-scale: 1.25;
+  }
+
+  body.tablet-mode .ve-btn,
+  body.tablet-mode .btn,
+  body.tablet-mode button,
+  body.tablet-mode .form-control,
+  body.tablet-mode input,
+  body.tablet-mode select,
+  body.tablet-mode textarea {
+    min-height: var(--tablet-hit-size);
+    font-size: 1em;
+  }
+
+  body.tablet-mode .nav > li > a {
+    padding: 10px 16px;
+  }
+
+  body.tablet-mode .lst__row-inner,
+  body.tablet-mode .lst__wrp-cells,
+  body.tablet-mode .lst__row-lnk-inner {
+    padding: 6px 6px 7px;
+  }
+
+  body.tablet-mode .lst__form-top {
+    gap: 6px;
+  }
+
+  body.tablet-mode .lst__search {
+    min-height: var(--tablet-hit-size);
+  }
+
+  body.tablet-mode .stats {
+    font-size: 14px;
+  }
+
+  body.tablet-mode .page__header {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  body.tablet-mode .page__title {
+    font-size: 1.4em;
+  }
+
+  body.tablet-mode .page__subtitle {
+    font-size: 0.95em;
+  }
+
+  body.tablet-mode .ve-btn-xs,
+  body.tablet-mode .ve-btn-xxs {
+    min-height: calc(var(--tablet-hit-size) - 6px);
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  @media (pointer: coarse) {
+    body.tablet-mode .clickable,
+    body.tablet-mode .lst__row-inner,
+    body.tablet-mode .lst__row-lnk-inner {
+      cursor: default;
+    }
+  }
+}
